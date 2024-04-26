@@ -1,0 +1,29 @@
+.color-btn{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 5px 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.color-btn:hover{
+    border: teal 1px solid;
+}
+
+.btns{
+    display: flex;
+    gap: 1rem;
+}
+
+.color-content{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.color-para{
+    font-size: 30px;
+    font-weight: 800;
+    
+}
+
