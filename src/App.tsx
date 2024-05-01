@@ -3,6 +3,7 @@ import "./App.css";
 import DropDown from "./components/dropdown/DropDown";
 import { useState } from "react";
 import Color from "./components/color/Color";
+import ImageSlider from "./components/image-slider/ImageSlider";
 
 const App = () => {
   const items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -15,39 +16,48 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      {/* random color component */}
-      <div
-        className="color-div
+    <>
+      <div className="App">
+        {/* random color component */}
+        <div
+          className="color-div
       "
-      >
-        <Color />
-      </div>
-      <div className="star-div">
-        <Star noOfStars={stars} />
-      </div>
+        >
+          <Color />
+        </div>
+        <div className="star-div">
+          <Star noOfStars={stars} />
+        </div>
 
-      <div className="content">
-        <DropDown
-          content={
-            <>
-              {items.map((item) => (
-                <div
-                  className="dropdown-item"
-                  key={item}
-                  onClick={() => handleStars(item)}
-                >
-                  {`${item > 1 ? `${item} stars` : `${item} star`}`}
-                </div>
-              ))}
-            </>
-          }
-          open={open}
-          setOpen={setOpen}
-          stars={stars}
+        <div className="content">
+          <DropDown
+            content={
+              <>
+                {items.map((item) => (
+                  <div
+                    className="dropdown-item"
+                    key={item}
+                    onClick={() => handleStars(item)}
+                  >
+                    {`${item > 1 ? `${item} stars` : `${item} star`}`}
+                  </div>
+                ))}
+              </>
+            }
+            open={open}
+            setOpen={setOpen}
+            stars={stars}
+          />
+        </div>
+      </div>
+      <div>
+        <ImageSlider
+          url={"https://picsum.photos/v2/list"}
+          limit={"6"}
+          page="1"
         />
       </div>
-    </div>
+    </>
   );
 };
 
