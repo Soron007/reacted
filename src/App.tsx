@@ -4,6 +4,7 @@ import DropDown from "./components/dropdown/DropDown";
 import { useState } from "react";
 import Color from "./components/color/Color";
 import ImageSlider from "./components/image-slider/ImageSlider";
+import LoadMore from "./components/loadMore/LoadMore";
 
 const App = () => {
   const items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -17,9 +18,9 @@ const App = () => {
 
   return (
     <>
-      <div className="App">
-        {/* random color component */}
-        <div
+      {/* <div className="App"> */}
+      {/* random color component */}
+      {/* <div
           className="color-div
       "
         >
@@ -56,7 +57,10 @@ const App = () => {
           limit={"6"}
           page="1"
         />
-      </div>
+      </div> */}
+
+      <LoadMore />
+      {/* </div> */}
     </>
   );
 };
